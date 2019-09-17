@@ -48,7 +48,7 @@ Since RNN-IMP cannot be applied to the entire chromosome currently, imputaion is
 - config file 2
   - JSON file for structure information of model 2
 
-The example data set contains 20 regions for chr22:1-18978417. Model parameters for these regions were trained using phased genotype data for remaining 2,404 individuals.
+The example data set contains 10 regions for chr22:1-17885697. Model parameters for these regions were trained using phased genotype data for remaining 2,404 individuals.
 
 ## OPTIONS
 
