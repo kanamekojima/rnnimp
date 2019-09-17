@@ -35,7 +35,7 @@ python3 scripts/imputation_all.py \
   
 ~~~~
 
-Input HAP file `chr22.hap.gz` contains phased genotype data of 100 individuals for chromosome 22 obtained from 1000 Genomes Project phase3 integrated data set (http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/). Only the marker sites designed in Infinium Omni2.5-8 BeadChip (https://www.illumina.com/products/by-type/microarray-kits/infinium-omni25-8.html) are contained in the data. Those 100 individuals were selected randomly from 2,504 individuals comprising the phase3 integrated data set.
+Input HAP file `chr22.hap.gz` contains phased genotype data of 100 individuals for chromosome 22 obtained from 1000 Genomes Project phase3 integrated data set (http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/). Only the marker sites designed in Infinium Omni2.5-8 BeadChip (https://www.illumina.com/products/by-type/microarray-kits/infinium-omni25-8.html) are contained in the data. Those 100 individuals were selected randomly from 2,504 individuals comprising the phase3 integrated data set. (Sorry, we are now preparing an instruction and a script for example data)
 
 Since RNN-IMP cannot be applied to the entire chromosome currently, imputaion is computed in small regions seperately, and the result of each region is merged as a final output. `model_files.txt` given to `--model-file-list` option is a text file in which path of files required for each region is specified at each row. Each region requires the following four types files:
 
