@@ -67,9 +67,9 @@ The example data set contains 20 regions for chr22:1-18978417. Model parameters 
 
 RNN-IMP is free for academic use only. For commercial use please contact both of the following e-mail addresses:
 
-kojima <AT> megabank <DOT> tohoku <DOT> ac <DOT> jp
+kojima [AT] megabank [DOT] tohoku [DOT] ac [DOT] jp
 
-kengo <AT> ecei <DOT> tohoku <DOT> ac <DOT> jp
+kengo [AT] ecei [DOT] tohoku [DOT] ac [DOT] jp
 
 ## DISLAIMER
 
@@ -79,4 +79,4 @@ RNN-IMP (THE "SOFTWARE") IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPR
 
 Developer: Kaname Kojima
 
-kojima <AT> megabank <DOT> tohoku <DOT> ac <DOT> jp
+kojima [AT] megabank [DOT] tohoku [DOT] ac [DOT] jp
