@@ -39,7 +39,6 @@ Put the VCF file and the CSV file in `org_data` directory. Then, from the follow
 
 ~~~~
 python3 scripts/test_data_preparation.py
-
 ~~~~
 
 `chr22.hap.gz` contains phased genotype data of 100 individuals for chromosome 22 obtained from 1KGP phase3 integrated data set. Genotype data in `chr22.hap.gz` are only for the marker sites designed in Infinium Omni2.5-8 BeadChip. 100 individuals for `chr22.hap.gz` were selected randomly from 2,504 individuals comprising the phase3 integrated data set. Sample names of the 100 individuals are in `example_data/hap/test_samples.txt`.
