@@ -2,7 +2,7 @@
 
 ## OVERVIEW
 
-RNN-IMP is a recurrent neural network based genotype imputation program implemented in Python. RNN-IMP takes phased genotypes in HAPLEGEND format as input data and outputs imputation results in Oxford GEN format.
+RNN-IMP is a recurrent neural network based genotype imputation program implemented in Python. RNN-IMP takes phased genotypes in HAP/LEGEND format as input data and outputs imputation results in Oxford GEN format.
 
 ## REQUIREMENT
 
@@ -15,7 +15,7 @@ Also, please set path to python3.
 
 ## INPUT
 
-- Phased genotype data in HAPLEGEND format
+- Phased genotype data in HAP/LEGEND format
 - Trained model files (for details, please see EXAMPLE USAGE)
 
 ## OUTPUT
@@ -95,6 +95,6 @@ RNN-IMP (THE "SOFTWARE") IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPR
 
 ## CONTACT
 
-Developer: Kaname Kojima
+Developer: Kaname Kojima, Ph.D.
 
 kojima [AT] megabank [DOT] tohoku [DOT] ac [DOT] jp
