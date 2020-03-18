@@ -72,7 +72,7 @@ RNN-IMP computes imputation for small regions separately, and the final output i
 - Config file 2
   - JSON file for the structure information of model 2
 
-The files for each region are in `example_data/model_data` directory of this example dataset. Note that this example dataset contains the files for 10 regions, which cover only a part of chromosome 22 (chr22:1-17885697), due to the limitation of the file upload size. The files for all the regions, which cover whole chromosome 22, are available in [https://jmorp.megabank.tohoku.ac.jp/dj1-storage/code/rnn-imp/rnnimp_model_data_chr22.tar.gz](https://jmorp.megabank.tohoku.ac.jp/dj1-storage/code/rnn-imp/rnnimp_model_data_chr22.tar.gzh). Model parameters in this example dataset were trained using phased genotype data for 2,404 individuals who are not in `chr22.hap.gz` from 1KGP phase3 integrated dataset.
+The files for each region are in `example_data/model_data` directory of this example dataset. Note that this example dataset contains the files for 10 regions, which cover only a part of chromosome 22 (chr22:1-17885697), due to the limitation of the file upload size. The files for all the regions, which cover whole chromosome 22, are available in [https://jmorp.megabank.tohoku.ac.jp/dj1-storage/code/rnn-imp/rnnimp_model_data_chr22.tar.gz](https://jmorp.megabank.tohoku.ac.jp/dj1-storage/code/rnn-imp/rnnimp_model_data_chr22.tar.gz). Model parameters in this example dataset were trained using phased genotype data for 2,404 individuals who are not in `chr22.hap.gz` from 1KGP phase3 integrated dataset.
 
 ## OPTIONS
 
