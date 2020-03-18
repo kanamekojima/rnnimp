@@ -27,16 +27,16 @@ Genotype imputation results in Oxford GEN format
 The example dataset in the uploaded file does not contain the genotype data files for test samples, `chr22.hap.gz` and `chr22.legend.gz`.
 The following three files and a software program are required for the preparation of `chr22.hap.gz` and `chr22.legend.gz`:
 - A VCF file of 1000 Genome Project (1KGP) phase3 integrated dataset for chromosome22 (`ALL.chr22.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz`)
-  - Download the VCF file from the following ftp site and put it to `org data` directory:
+  - Download the VCF file from the following ftp site and put it in `org data` directory:
     - [http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502](http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502])
 - A manifest file for Infinium Omni2.5-8 BeadChip (`InfiniumOmni2-5-8v1-4_A1.csv`)
   - Download `infinium-omni-2-5-8v1-4-a1-manifest-file-csv.zip` from the following web site:
     - [https://support.illumina.com/array/array_kits/humanomni2_5-8_beadchip_kit/downloads.html](https://support.illumina.com/array/array_kits/humanomni2_5-8_beadchip_kit/downloads.html)
-  - Decompress the downloaded file and copy `InfiniumOmni2-5-8v1-4_A1.csv` to `org data` directory
+  - Decompress the downloaded file and put `InfiniumOmni2-5-8v1-4_A1.csv` in `org data` directory
 - Hg19 fasta file (`hg19.fa`)
   - Download `hg19.fa.gz` from the following web site:
     - [https://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/](https://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/)
-  - Decompress the downloaded file and copy `hg19.fa` to `org data` directory
+  - Decompress the downloaded file and put `hg19.fa` in `org data` directory
 - SAMtools
   - See [http://samtools.sourceforge.net/](http://samtools.sourceforge.net/) for the installation of SAMtools
   - Set the path in `samtools` after the installation
@@ -78,14 +78,14 @@ The files for each region are in `example_data/model_data` directory of this exa
 
 | Option | Default value | Summary |
 |:-------|--------------:|:--------|
-| --hap STRING_VALUE | - | input HAP file |
-| --legend STRING_VALUE | - | input LEGEND file |
-| --model-files STRING_VALUE | - | model file list file |
-| --output-prefix STRING_VALUE | - | output file prefix |
-| --num-threads INT_VALUE | 1 | number of threads |
-| --qsub | False | use Univa Grid Engine for computation (this option only works for the environment where Univa Grid Engine is available) |
-| --job-name STRING_VALUE | imputation | job name prefix for Univa Grid Engine job |
-| --memory-size STRING_VALUE | 10GB | memory size for Univa Grid Engine job |
+| --hap STRING_VALUE | - | Input HAP file |
+| --legend STRING_VALUE | - | Input LEGEND file |
+| --model-files STRING_VALUE | - | Model file list file |
+| --output-prefix STRING_VALUE | - | Output file prefix |
+| --num-threads INT_VALUE | 1 | Number of threads |
+| --qsub | False | Use Univa Grid Engine for computation (this option only works for the environment where Univa Grid Engine is available) |
+| --job-name STRING_VALUE | imputation | Job name prefix for Univa Grid Engine job |
+| --memory-size STRING_VALUE | 10GB | Memory size for Univa Grid Engine job |
 
 ## LICENSE
 
