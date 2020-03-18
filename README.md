@@ -28,7 +28,7 @@ The example dataset in the uploaded file does not contain the genotype data file
 The following three files and a software program are required for the preparation of `chr22.hap.gz` and `chr22.legend.gz`:
 - A VCF file of 1000 Genome Project (1KGP) phase3 integrated dataset for chromosome22 (`ALL.chr22.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz`)
   - Download the VCF file from the following ftp site and put it in `org data` directory:
-    - [http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502](http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502])
+    - [http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502](http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502)
 - A manifest file for Infinium Omni2.5-8 BeadChip (`InfiniumOmni2-5-8v1-4_A1.csv`)
   - Download `infinium-omni-2-5-8v1-4-a1-manifest-file-csv.zip` from the following web site:
     - [https://support.illumina.com/array/array_kits/humanomni2_5-8_beadchip_kit/downloads.html](https://support.illumina.com/array/array_kits/humanomni2_5-8_beadchip_kit/downloads.html)
