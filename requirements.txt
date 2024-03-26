@@ -1,0 +1,4 @@
+tensorflow>=1.15,<=2.15
+tf2onnx
+onnxruntime
+pyfaidx
