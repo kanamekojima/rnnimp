@@ -43,19 +43,19 @@ def main():
     model_legend_file_list = sorted(
         glob.glob(args.model_prefix + '*.legend.gz'),
         key=lambda x: int(x[:-10].split('_')[-1]))
-    splitted_data_dict_list = split_hapslegend.split_data(
+    split_data_dict_list = split_hapslegend.split_data(
         args.hap_file, args.legend_file, model_legend_file_list,
         args.output_prefix)
     time3 = time.time()
     print('Elapsed time for data preparation: {:f} [s]'.format(time3 - time2))
 
-    for i, splitted_data_dict in enumerate(splitted_data_dict_list, start=1):
-        print('{:d} / {:d}'.format(i, len(splitted_data_dict_list)))
+    for i, split_data_dict in enumerate(split_data_dict_list, start=1):
+        print('{:d} / {:d}'.format(i, len(split_data_dict_list)))
         command = args.python3_bin
         command += ' ' + os.path.join(SCRIPT_DIR, 'inference.py')
-        command += ' --hap ' + splitted_data_dict.hap_file
-        command += ' --legend ' + splitted_data_dict.legend_file
-        command += ' --model-prefix ' + splitted_data_dict.model_prefix
+        command += ' --hap ' + split_data_dict.hap_file
+        command += ' --legend ' + split_data_dict.legend_file
+        command += ' --model-prefix ' + split_data_dict.model_prefix
         command += ' --output-format ' + args.output_format
         if args.output_format == 'vcf':
             output_file = '{:s}_{:d}.vcf.gz'.format(args.output_prefix, i)
@@ -74,7 +74,7 @@ def main():
         command += ' --legend ' + args.legend_file
         command += ' --gen-prefix ' + args.output_prefix
         command += ' --start-index 1'
-        command += ' --end-index {:d}'.format(len(splitted_data_dict_list))
+        command += ' --end-index {:d}'.format(len(split_data_dict_list))
         command += ' --output-file {:s}.gen'.format(args.output_prefix)
         system(command)
     elif args.output_format == 'vcf':
@@ -88,7 +88,7 @@ def main():
         command += ' --chromosome ' + args.chromosome
         command += ' --vcf-prefix ' + args.output_prefix
         command += ' --start-index 1'
-        command += ' --end-index {:d}'.format(len(splitted_data_dict_list))
+        command += ' --end-index {:d}'.format(len(split_data_dict_list))
         command += ' --output-file {:s}.vcf'.format(args.output_prefix)
         system(command)
     else:

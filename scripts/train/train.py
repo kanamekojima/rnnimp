@@ -21,13 +21,13 @@ def main():
                         dest='rnn_cell_type', help='RNN cell type')
     parser.add_argument('--num-units', type=int, default=40,
                         dest='num_units', help='number of units')
-    parser.add_argument('--num-layers-higher', type=int, default=5,
+    parser.add_argument('--num-layers-higher', type=int, default=4,
                         dest='num_layers_higher',
                         help='number of layers for higher MAF')
-    parser.add_argument('--num-layers-lower', type=int, default=5,
+    parser.add_argument('--num-layers-lower', type=int, default=4,
                         dest='num_layers_lower',
                         help='number of layers for lower MAF')
-    parser.add_argument('--feature-size', type=int, default=10,
+    parser.add_argument('--feature-size', type=int, default=40,
                         dest='feature_size', help='feature size')
     parser.add_argument('--gamma1', type=float, default=0.75,
                         dest='gamma1', help='gamma1')
@@ -40,8 +40,8 @@ def main():
     parser.add_argument('--validation-sample-size', type=int, default=100,
                         dest='validation_sample_size',
                         help='validation sample size')
-    parser.add_argument('--num-threads', type=int, default=2,
-                        dest='num_threads', help='num threads')
+    parser.add_argument('--num-threads', type=int, default=1,
+                        dest='num_threads', help='number of threads')
     parser.add_argument('--slurm', action='store_true', default=False,
                         dest='slurm_flag', help='use slurm')
     parser.add_argument('--job-name-prefix', type=str, default='train',

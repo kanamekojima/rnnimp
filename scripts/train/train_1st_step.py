@@ -96,15 +96,13 @@ def main():
                         dest='legend_file', help='legend file')
     parser.add_argument('--output-prefix', type=str, required=True,
                         dest='output_prefix', help='output prefix')
-    parser.add_argument('--random-seed', type=int, default=3141592653,
-                        dest='random_seed', help='seed for random')
     parser.add_argument('--rnn-cell-type', type=str, default='GRU',
                         dest='rnn_cell_type', help='RNN cell type')
     parser.add_argument('--num-units', type=int,  default=40, dest='num_units',
                         help='output dimension of rnn cells')
     parser.add_argument('--num-layers', type=int, default=5, dest='num_layers',
                         help='number of layers')
-    parser.add_argument('--feature-size', type=int, default=10,
+    parser.add_argument('--feature-size', type=int, default=40,
                         dest='feature_size', help='feature size')
     parser.add_argument('--scope', type=str, required=True,
                         dest='scope', help='model scope')
@@ -121,8 +119,10 @@ def main():
     parser.add_argument('--rsquare', action='store_true', default=False,
                         dest='use_rsquare',
                         help='use r-square values for validation')
-    parser.add_argument('--num-threads', type=int, default=8,
-                        dest='num_threads', help='num threads')
+    parser.add_argument('--random-seed', type=int, default=3141592653,
+                        dest='random_seed', help='seed for random')
+    parser.add_argument('--num-threads', type=int, default=1,
+                        dest='num_threads', help='number of threads')
     args = parser.parse_args()
 
     start_time = time.time()

@@ -33,7 +33,7 @@ def split_legend(legend_file, model_legend_file_list, output_prefix):
     positions = [
         int(line.rstrip().split(' ')[position_col]) for line in legend_lines
     ]
-    splitted_data_info_list = []
+    split_data_info_list = []
     previous_start_index = 0
     max_index = len(positions) - 1
     for i, model_legend_file in enumerate(model_legend_file_list, start=1):
@@ -72,29 +72,29 @@ def split_legend(legend_file, model_legend_file_list, output_prefix):
                 fout.write(legend_lines[index])
                 fout.write('\n')
         assert model_legend_file.endswith('.legend.gz')
-        splitted_data_info = SplittedDataInfo(
+        split_data_info = SplittedDataInfo(
             hap_file=output_hap_file,
             legend_file=output_legend_file,
             model_prefix='.'.join(model_legend_file.split('.')[:-2]),
             start_index=start_index,
             end_index=end_index,
         )
-        splitted_data_info_list.append(splitted_data_info)
-    return splitted_data_info_list
+        split_data_info_list.append(split_data_info)
+    return split_data_info_list
 
 
-def split_hap(hap_file, splitted_data_info_list):
+def split_hap(hap_file, split_data_info_list):
     with reading(hap_file) as fin:
         f_index = 0
-        for i, splitted_data_info in enumerate(splitted_data_info_list):
-            start_index = splitted_data_info.start_index
-            end_index = splitted_data_info.end_index
-            if i == len(splitted_data_info_list) - 1:
+        for i, split_data_info in enumerate(split_data_info_list):
+            start_index = split_data_info.start_index
+            end_index = split_data_info.end_index
+            if i == len(split_data_info_list) - 1:
                 next_start_index = end_index
             else:
-                next_start_index = splitted_data_info_list[i + 1].start_index
+                next_start_index = split_data_info_list[i + 1].start_index
             next_line_buffer = []
-            output_hap_file = splitted_data_info.hap_file
+            output_hap_file = split_data_info.hap_file
             mkdir(os.path.dirname(output_hap_file))
             with writing(output_hap_file) as fout:
                 for index in range(start_index, end_index + 1):
@@ -120,7 +120,7 @@ def split_hap(hap_file, splitted_data_info_list):
 
 
 def split_data(hap_file, legend_file, model_legend_file_list, output_prefix):
-    splitted_data_info_list = split_legend(
+    split_data_info_list = split_legend(
         legend_file, model_legend_file_list, output_prefix)
-    split_hap(hap_file, splitted_data_info_list)
-    return splitted_data_info_list
+    split_hap(hap_file, split_data_info_list)
+    return split_data_info_list

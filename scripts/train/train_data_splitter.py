@@ -461,7 +461,7 @@ def main():
         args.body_marker_count_limit, args.flanking_marker_count_limit,
         partition_position_list)
 
-    print('No. of splitted regions: {:d}'.format(len(imp_region_info_list)))
+    print('No. of split regions: {:d}'.format(len(imp_region_info_list)))
 
     hap_handler = HapHandler(args.output_prefix + '_mod.hap.gz')
     legend_lines = []

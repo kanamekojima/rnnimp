@@ -38,8 +38,6 @@ def main():
                         help='init checkpoint file2')
     parser.add_argument('--output-prefix', type=str, required=True,
                         dest='output_prefix', help='output prefix')
-    parser.add_argument('--random-seed', type=int, default=3141592653,
-                        dest='random_seed', help='seed for random')
     parser.add_argument('--batch-size', type=int, default=500,
                         dest='batch_size', help='batch size')
     parser.add_argument('--max-iteration-count', type=int, default=100000,
@@ -52,8 +50,10 @@ def main():
     parser.add_argument('--rsquare', action='store_true', default=False,
                         dest='use_rsquare',
                         help='use r-square values for validation')
-    parser.add_argument('--num-threads', type=int, default=8,
-                        dest='num_threads', help='num threads')
+    parser.add_argument('--random-seed', type=int, default=3141592653,
+                        dest='random_seed', help='seed for random')
+    parser.add_argument('--num-threads', type=int, default=1,
+                        dest='num_threads', help='number of threads')
     args = parser.parse_args()
 
     start_time = time.time()
