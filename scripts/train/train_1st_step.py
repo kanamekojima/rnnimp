@@ -206,7 +206,7 @@ def main():
         train_data_feeder, validation_inputs, validation_outputs,
         features, config, train_config)
     elapsed_time = time.time() - start_time
-    with open(args.output_prefix + '.time', 'wt'):
+    with open(args.output_prefix + '.time', 'wt') as fout:
         fout.write('Elapsed time: {:f} [s]\n'.format(elapsed_time))
 
 

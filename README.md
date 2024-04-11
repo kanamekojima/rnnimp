@@ -137,7 +137,7 @@ For computing environments using job schedulers other than Slurm, modifications 
 | --output-format STRING_VALUE | gen | Output format [gen / vcf] |
 | --python3-bin STRING_VALUE | python3 | Path to the Python3 binary |
 
-Options for `scripts/train/train.py`
+### Options for `scripts/train/train.py`
 
 | Option | Default Value | Summary |
 |:-------|:-------------:|:-------|
