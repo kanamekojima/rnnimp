@@ -163,6 +163,11 @@ For computing environments using job schedulers other than Slurm, modifications 
 
 If you find RNN-IMP or any of the scripts in this repository useful for your research, please cite:
 
+> Kojima, K., Tadaka, S., Okamura, Y. & Kinoshita, K. (2024).
+> Two-stage strategy using denoising autoencoders for robust reference-free genotype imputation with missing input genotypes.
+> *Journal of Human Genetics*.
+> https://doi.org/10.1038/s10038-024-01261-6
+
 > Kojima, K., Tadaka, S., Katsuoka, F., Tamiya, G., Yamamoto, M. & Kinoshita, K. (2020).
 > A genotype imputation method for de-identified haplotype reference information by using recurrent neural network.
 > *PLoS Computational Biology*, **16**(10): e1008207.
